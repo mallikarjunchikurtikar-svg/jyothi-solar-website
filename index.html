@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jyothi Solar Tech & Services</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#08110d;
+color:white;
+overflow-x:hidden;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+a{
+text-decoration:none;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(10px);
+z-index:1000;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.logo h2{
+font-size:24px;
+font-weight:700;
+color:white;
+}
+
+.logo span{
+color:#ff9800;
+}
+
+nav ul{
+display:flex;
+gap:28px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ff9800;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:140px 7% 80px;
+gap:60px;
+
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url('images/hero.jpg');
+
+background-size:cover;
+background-position:center;
+}
+
+.hero-left{
+flex:1;
+animation:fadeUp 1s ease;
+}
+
+.hero-left h1{
+font-size:72px;
+line-height:1.1;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.hero-left h1 span{
+color:#ff9800;
+}
+
+.hero-left p{
+font-size:18px;
+line-height:1.9;
+color:#ddd;
+max-width:700px;
+}
+
+.hero-buttons{
+margin-top:40px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:16px 34px;
+border-radius:50px;
+font-weight:600;
+transition:0.4s;
+display:inline-block;
+}
+
+.btn-orange{
+background:#ff9800;
+color:black;
+box-shadow:0 0 25px rgba(255,152,0,0.5);
+}
+
+.btn-orange:hover{
+transform:translateY(-5px);
+}
+
+.btn-outline{
+border:2px solid white;
+color:white;
+}
+
+.btn-outline:hover{
+background:white;
+color:black;
+}
+
+.hero-card{
+flex:1;
+background:rgba(255,255,255,0.08);
+padding:45px;
+border-radius:30px;
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 10px 40px rgba(0,0,0,0.5);
+max-width:500px;
+}
+
+.hero-card img{
+width:120px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.hero-card h3{
+text-align:center;
+font-size:34px;
+margin-bottom:15px;
+color:#ff9800;
+}
+
+.hero-card p{
+text-align:center;
+line-height:1.8;
+color:#ddd;
+}
+
+/* POPUP */
+
+.popup{
+position:fixed;
+top:100px;
+right:20px;
+background:#ff9800;
+color:black;
+padding:20px;
+border-radius:20px;
+z-index:999;
+width:280px;
+animation:pulse 2s infinite;
+box-shadow:0 0 30px rgba(255,152,0,0.5);
+}
+
+.popup h3{
+margin-bottom:10px;
+}
+
+.popup a{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:black;
+color:white;
+border-radius:40px;
+font-weight:600;
+}
+
+/* SECTION */
+
+section{
+padding:100px 7%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:52px;
+margin-bottom:12px;
+}
+
+.section-title span{
+color:#ff9800;
+}
+
+.section-title p{
+color:#ccc;
+}
+
+/* COUNTERS */
+
+.counters{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.counter-card{
+background:#12211b;
+padding:40px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+}
+
+.counter-card:hover{
+transform:translateY(-8px);
+}
+
+.counter-card h2{
+font-size:48px;
+color:#ff9800;
+margin-bottom:10px;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-card{
+background:#12211b;
+padding:35px;
+border-radius:25px;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.service-card:hover{
+transform:translateY(-10px);
+border-color:#ff9800;
+}
+
+.service-card i{
+font-size:50px;
+margin-bottom:20px;
+color:#ff9800;
+}
+
+.service-card h3{
+margin-bottom:15px;
+font-size:24px;
+}
+
+.service-card p{
+color:#ccc;
+line-height:1.8;
+}
+
+/* EMI */
+
+.emi-box{
+background:linear-gradient(135deg,#ff9800,#ff6f00);
+padding:60px;
+border-radius:35px;
+color:black;
+text-align:center;
+}
+
+.emi-box h2{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.emi-box p{
+font-size:18px;
+line-height:1.9;
+font-weight:500;
+}
+
+.bank-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.bank-card{
+background:white;
+padding:25px;
+border-radius:20px;
+height:130px;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:0.4s;
+}
+
+.bank-card:hover{
+transform:scale(1.05);
+}
+
+/* BRANDS */
+
+.brand-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:25px;
+}
+
+.brand-card{
+background:white;
+padding:25px;
+border-radius:20px;
+height:130px;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:0.4s;
+}
+
+.brand-card:hover{
+transform:translateY(-8px);
+}
+
+/* PROJECTS */
+
+.slider{
+width:100%;
+overflow:hidden;
+border-radius:30px;
+}
+
+.slides{
+display:flex;
+overflow-x:auto;
+scroll-behavior:smooth;
+height:100%;
+gap:20px;
+padding-bottom:10px;
+}
+
+.slides img{
+width:400px;
+height:100%;
+object-fit:cover;
+border-radius:20px;
+flex-shrink:0;
+}
+
+
+
+/* CALCULATOR */
+
+.calculator{
+background:#12211b;
+padding:50px;
+border-radius:30px;
+max-width:700px;
+margin:auto;
+}
+
+.calculator input{
+width:100%;
+padding:18px;
+border:none;
+outline:none;
+margin-top:20px;
+border-radius:15px;
+font-size:18px;
+}
+
+.calculator button{
+width:100%;
+margin-top:20px;
+padding:18px;
+border:none;
+background:#ff9800;
+font-size:20px;
+font-weight:700;
+border-radius:15px;
+cursor:pointer;
+}
+
+.result{
+margin-top:30px;
+font-size:24px;
+text-align:center;
+color:#ff9800;
+font-weight:700;
+line-height:1.8;
+}
+
+/* COMPARISON */
+
+.compare{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.compare-box{
+background:#12211b;
+padding:40px;
+border-radius:25px;
+}
+
+.compare-box h3{
+font-size:30px;
+margin-bottom:20px;
+color:#ff9800;
+}
+
+.compare-box p{
+line-height:2;
+color:#ddd;
+}
+
+/* FAQ */
+
+.faq{
+max-width:900px;
+margin:auto;
+}
+
+.faq-item{
+background:#12211b;
+margin-bottom:20px;
+padding:25px;
+border-radius:20px;
+}
+
+.faq-item h3{
+color:#ff9800;
+margin-bottom:10px;
+}
+
+/* REVIEW */
+
+.review-form{
+background:#12211b;
+padding:40px;
+border-radius:30px;
+max-width:700px;
+margin:auto;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select{
+width:100%;
+padding:16px;
+margin-top:18px;
+border:none;
+outline:none;
+border-radius:15px;
+}
+
+.review-form button{
+margin-top:20px;
+padding:16px 30px;
+background:#ff9800;
+border:none;
+font-weight:700;
+border-radius:40px;
+cursor:pointer;
+}
+
+/* MAP */
+
+.map iframe{
+width:100%;
+height:450px;
+border:none;
+border-radius:30px;
+}
+
+/* FOOTER */
+
+footer{
+background:#020805;
+padding:60px 7%;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:40px;
+}
+
+.footer-box h3{
+margin-bottom:20px;
+color:#ff9800;
+}
+
+.footer-box p{
+line-height:1.9;
+color:#ccc;
+}
+
+/* FLOAT ICONS */
+
+.whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#25d366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:white;
+z-index:1000;
+box-shadow:0 0 25px rgba(0,0,0,0.5);
+}
+
+.call{
+position:fixed;
+bottom:110px;
+right:25px;
+width:70px;
+height:70px;
+border-radius:50%;
+background:#ff9800;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:black;
+z-index:1000;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.05);}
+100%{transform:scale(1);}
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-left h1{
+font-size:50px;
+}
+
+nav ul{
+display:none;
+}
+
+.popup{
+display:none;
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-left h1{
+font-size:38px;
+}
+
+.section-title h2{
+font-size:38px;
+}
+
+.slides img{
+height:320px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+<img src="images/logo.png">
+<h2>Jyothi Solar <span>Tech & Services</span></h2>
+</div>
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#brands">Brands</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- POPUP -->
+
+<div class="popup">
+<h3>⚡ Free Site Visit Today</h3>
+<p>Limited slots available today.</p>
+<a href="https://wa.me/919182486433">Book Now</a>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-left">
+
+<h1>
+Contributing Towards <br>
+<span>Sustainable Future</span>
+</h1>
+
+<p>
+MNRE Approved Vendor providing residential and commercial solar installations with subsidy assistance, EMI support, government bank loans, and premium quality solar products.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:9392786433" class="btn btn-orange">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/919182486433" class="btn btn-outline">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-card">
+
+<img src="images/logo.png">
+
+<h3>MNRE Approved Vendor</h3>
+
+<p>
+Trusted solar energy solutions for homes, businesses and industries across Hyderabad and Telangana.
+</p>
+
+</div>
+
+</section>
+
+<!-- COUNTERS -->
+
+<section>
+
+<div class="section-title">
+<h2>Why <span>Choose Us</span></h2>
+<p>Trusted by hundreds of happy customers.</p>
+</div>
+
+<div class="counters">
+
+<div class="counter-card">
+<h2>500+</h2>
+<p>Installations</p>
+</div>
+
+<div class="counter-card">
+<h2>300+</h2>
+<p>Happy Customers</p>
+</div>
+
+<div class="counter-card">
+<h2>24/7</h2>
+<p>Customer Support</p>
+</div>
+
+<div class="counter-card">
+<h2>100%</h2>
+<p>Quality Service</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="section-title">
+<h2>Our <span>Services</span></h2>
+<p>Professional solar services with expert support.</p>
+</div>
+
+<div class="services">
+
+<div class="service-card">
+<i class="fa-solid fa-house"></i>
+<h3>Residential Solar</h3>
+<p>Complete rooftop solar installation for homes.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-building"></i>
+<h3>Commercial Solar</h3>
+<p>Solar solutions for offices and industries.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Net Metering</h3>
+<p>Fast and easy net metering assistance.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-solar-panel"></i>
+<h3>PM Surya Ghar</h3>
+<p>Government subsidy assistance support.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Maintenance</h3>
+<p>24/7 maintenance and technical support.</p>
+</div>
+
+<div class="service-card">
+<i class="fa-solid fa-money-check-dollar"></i>
+<h3>EMI Assistance</h3>
+<p>Easy EMI and solar loan support available.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- EMI -->
+
+<section>
+
+<div class="emi-box">
+
+<h2>Easy EMI & Government Bank Loan Available</h2>
+
+<p>
+We provide solar loan and EMI assistance from trusted government banks with easy approval process and affordable monthly payments.
+</p>
+
+<div class="bank-grid">
+
+<div class="bank-card">
+<img src="images/sbi.png">
+</div>
+
+<div class="bank-card">
+<img src="images/pnb.png">
+</div>
+
+<div class="bank-card">
+<img src="images/canara.png">
+</div>
+
+<div class="bank-card">
+<img src="images/bob.png">
+</div>
+
+<div class="bank-card">
+<img src="images/union.png">
+</div>
+
+<div class="bank-card">
+<img src="images/boi.png">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOLAR PANEL BRANDS -->
+
+<section id="brands">
+
+<div class="section-title">
+<h2>Solar Panel <span>Brands</span></h2>
+<p>Premium panel brands we use.</p>
+</div>
+
+<div class="brand-grid">
+
+<a href="https://www.adanisolar.com/" target="_blank" class="brand-card">
+<img src="images/adani.png">
+</a>
+
+<a href="https://www.tatapowersolar.com/" target="_blank" class="brand-card">
+<img src="images/tata.png">
+</a>
+
+<a href="https://waaree.com/" target="_blank" class="brand-card">
+<img src="images/waaree.png">
+</a>
+
+<a href="https://www.vikramsolar.com/" target="_blank" class="brand-card">
+<img src="images/vikram.png">
+</a>
+
+<a href="https://renew.com/" target="_blank" class="brand-card">
+<img src="images/renew.png">
+</a>
+
+<a href="#" class="brand-card">
+<img src="images/premier.png">
+</a>
+
+</div>
+
+</section>
+
+<!-- INVERTER BRANDS -->
+
+<section>
+
+<div class="section-title">
+<h2>Solar Inverter <span>Brands</span></h2>
+<p>Trusted inverter brands we use.</p>
+</div>
+
+<div class="brand-grid">
+
+<div class="brand-card">
+<img src="images/polycab.png">
+</div>
+
+<div class="brand-card">
+<img src="images/growatt.png">
+</div>
+
+<div class="brand-card">
+<img src="images/goodwe.png">
+</div>
+
+<div class="brand-card">
+<img src="images/utl.png">
+</div>
+
+<div class="brand-card">
+<img src="images/luminous.png">
+</div>
+
+<div class="brand-card">
+<img src="images/waareeinv.png">
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="section-title">
+<h2>Our <span>Projects</span></h2>
+<p>Recent solar installations.</p>
+</div>
+
+<div class="slider">
+
+<div class="slides">
+
+<img src="images/solar1.jpg">
+<img src="images/solar2.jpg">
+<img src="images/solar3.jpg">
+<img src="images/solar4.jpg">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CALCULATOR -->
+
+<section>
+
+<div class="section-title">
+<h2>Solar Savings <span>Calculator</span></h2>
+<p>Calculate your estimated solar system.</p>
+</div>
+
+<div class="calculator">
+
+<input type="number" id="bill" placeholder="Enter Monthly Electricity Bill ₹">
+
+<button onclick="calculate()">Calculate</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+</section>
+
+<!-- BILL COMPARISON -->
+
+<section>
+
+<div class="section-title">
+<h2>Electricity Bill <span>Comparison</span></h2>
+</div>
+
+<div class="compare">
+
+<div class="compare-box">
+<h3>Before Solar</h3>
+<p>
+Monthly Bill : ₹5000+<br>
+Yearly Expense : ₹60,000+<br>
+No Savings
+</p>
+</div>
+
+<div class="compare-box">
+<h3>After Solar</h3>
+<p>
+Monthly Bill : ₹500<br>
+Yearly Savings : ₹50,000+<br>
+25 Years Long Term Savings
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PM SURYA -->
+
+<section>
+
+<div class="section-title">
+<h2>PM Surya Ghar <span>Muft Bijli Yojana</span></h2>
+</div>
+
+<div class="compare-box">
+
+<p>
+Get government subsidy benefits for rooftop solar installation under PM Surya Ghar Muft Bijli Yojana. We provide complete assistance including registration, subsidy process, documentation and installation support.
+</p>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section>
+
+<div class="section-title">
+<h2>Frequently Asked <span>Questions</span></h2>
+</div>
+
+<div class="faq">
+
+<div class="faq-item">
+<h3>How much subsidy can I get?</h3>
+<p>Subsidy depends on solar capacity and government rules.</p>
+</div>
+
+<div class="faq-item">
+<h3>Do you provide EMI option?</h3>
+<p>Yes. Easy EMI and government bank loan support available.</p>
+</div>
+
+<div class="faq-item">
+<h3>How many years warranty?</h3>
+<p>Panel warranty available up to 25 years.</p>
+</div>
+
+<div class="faq-item">
+<h3>How much time installation takes?</h3>
+<p>Usually 2 to 5 working days depending on project size.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+<div class="section-title">
+<h2>Customer <span>Reviews</span></h2>
+</div>
+
+<div class="review-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="text" placeholder="Address">
+
+<select>
+<option>⭐ 1 Star</option>
+<option>⭐ 2 Star</option>
+<option>⭐ 3 Star</option>
+<option>⭐ 4 Star</option>
+<option>⭐ 5 Star</option>
+</select>
+
+<textarea rows="5" placeholder="Write your review"></textarea>
+
+<button>Submit Review</button>
+
+</div>
+<div style="margin-top:60px;">
+
+<div style="text-align:center; margin-bottom:40px;">
+
+<h1 style="font-size:70px;color:#ff9800;">4.7 ★</h1>
+
+<p style="color:#ccc;font-size:20px;">
+Average Customer Rating Based On Service Feedback
+</p>
+
+</div>
+
+<div class="services">
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★☆</h3>
+<p>
+Installation process was smooth and team explained everything clearly.
+</p>
+<h4>- Ramesh Kumar, Boduppal</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★★</h3>
+<p>
+Very professional work and subsidy assistance was completed properly.
+</p>
+<h4>- Suresh Reddy, Uppal</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★☆</h3>
+<p>
+Electricity bill reduced a lot after installation.
+</p>
+<h4>- Mahesh Yadav, LB Nagar</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★★</h3>
+<p>
+Affordable EMI option and quality solar panels provided.
+</p>
+<h4>- Praveen Rao, Nagole</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★☆</h3>
+<p>
+Good installation team and quick maintenance support.
+</p>
+<h4>- Anil Kumar, Dilsukhnagar</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★★</h3>
+<p>
+Very satisfied with net metering and PM Surya Ghar assistance.
+</p>
+<h4>- Kiran Patel, Habsiguda</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★☆</h3>
+<p>
+Pricing was reasonable and installation completed on time.
+</p>
+<h4>- Vinod Sharma, Tarnaka</h4>
+</div>
+
+<div class="service-card">
+<h3 style="color:#ff9800;">★★★★★</h3>
+<p>
+Customer support is excellent and available whenever required.
+</p>
+<h4>- Rajesh Verma, Secunderabad</h4>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- MAP -->
+
+<section>
+
+<div class="section-title">
+<h2>Find <span>Us</span></h2>
+</div>
+
+<div class="map">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.4655006959324!2d78.58792997450055!3d17.43742018345835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d7e810773f7%3A0xb22591c6b040f279!2sJyothi%20Solar%20Tech%20%26%20Services!5e0!3m2!1sen!2sin!4v1779020993233!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+<div class="footer-grid">
+
+<div class="footer-box">
+<h3>Jyothi Solar Tech & Services</h3>
+<p>
+Contributing towards sustainable future with trusted solar solutions.
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Contact</h3>
+<p>
+📞 9392786433<br><br>
+💬 9182486433<br><br>
+📧 jyothisolartechandservices@gmail.com
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Address</h3>
+<p>
+Plot No 135, Survey No 60&61, Rajalingam Colony,
+Phase 2, Boduppal, Hyderabad,
+Telangana - 500092
+</p>
+</div>
+
+<div class="footer-box">
+<h3>Working Hours</h3>
+<p>
+24/7 Customer Support Available
+</p>
+</div>
+
+</div>
+
+</footer>
+
+<!-- FLOAT BUTTONS -->
+
+<a href="https://wa.me/919182486433" class="whatsapp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="tel:9392786433" class="call">
+<i class="fa-solid fa-phone"></i>
+</a>
+
+<script>
+
+function calculate(){
+
+let bill=document.getElementById("bill").value;
+
+let kw=(bill/1000).toFixed(1);
+
+let saving=(bill*0.8).toFixed(0);
+
+document.getElementById("result").innerHTML=
+"Recommended Solar System : "+kw+" KW <br> Estimated Monthly Savings : ₹"+saving;
+
+}
+
+</script>
+
+</body>
+</html>
