@@ -633,7 +633,83 @@ display:none;
 }
 
 }
+/* WHY CHOOSE PREMIUM */
 
+.why-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.why-card{
+background:#12211b;
+padding:35px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+.why-card:hover{
+transform:translateY(-10px);
+border-color:#ff9800;
+box-shadow:0 0 25px rgba(255,152,0,0.3);
+}
+
+.why-card i{
+font-size:55px;
+margin-bottom:20px;
+color:#ff9800;
+}
+
+.why-card h3{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.why-card p{
+color:#ccc;
+line-height:1.8;
+}
+
+.finance-calc{
+background:#12211b;
+padding:50px;
+border-radius:30px;
+max-width:750px;
+margin:auto;
+}
+
+.finance-calc input{
+width:100%;
+padding:18px;
+margin-top:20px;
+border:none;
+outline:none;
+border-radius:15px;
+font-size:18px;
+}
+
+.finance-calc button{
+width:100%;
+padding:18px;
+margin-top:25px;
+background:#ff9800;
+border:none;
+font-size:20px;
+font-weight:700;
+border-radius:15px;
+cursor:pointer;
+}
+
+.finance-result{
+margin-top:30px;
+font-size:24px;
+text-align:center;
+line-height:2;
+color:#ff9800;
+font-weight:700;
+}
 @media(max-width:600px){
 
 .hero-left h1{
@@ -809,7 +885,54 @@ Trusted solar energy solutions for homes, businesses and industries across Hyder
 </div>
 
 </section>
+<section>
 
+<div class="section-title">
+<h2>Why <span>Customers Trust Us</span></h2>
+<p>Professional solar services with trusted support.</p>
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<i class="fa-solid fa-medal"></i>
+<h3>5+ Years Experience</h3>
+<p>Experienced team delivering professional solar installations.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-file-circle-check"></i>
+<h3>Subsidy Assistance</h3>
+<p>Complete PM Surya Ghar subsidy documentation support.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Fast Installation</h3>
+<p>Quick installation process with quality workmanship.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-solar-panel"></i>
+<h3>Premium Solar Panels</h3>
+<p>Top branded solar panels with high efficiency performance.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-headset"></i>
+<h3>24/7 Support</h3>
+<p>Dedicated customer support and maintenance assistance.</p>
+</div>
+
+<div class="why-card">
+<i class="fa-solid fa-house-circle-check"></i>
+<h3>Free Site Visit</h3>
+<p>Free solar inspection and customized system planning.</p>
+</div>
+
+</div>
+
+</section>
 <!-- EMI -->
 
 <section>
@@ -976,7 +1099,24 @@ We provide solar loan and EMI assistance from trusted government banks with easy
 </div>
 
 </section>
+<section>
 
+<div class="section-title">
+<h2>EMI & ROI <span>Calculator</span></h2>
+<p>Check monthly EMI and solar return benefits.</p>
+</div>
+
+<div class="finance-calc">
+
+<input type="number" id="solarCost" placeholder="Enter Solar System Cost ₹">
+
+<button onclick="financeCalc()">Calculate EMI</button>
+
+<div class="finance-result" id="financeResult"></div>
+
+</div>
+
+</section>
 <!-- BILL COMPARISON -->
 
 <section>
@@ -1163,6 +1303,7 @@ Pricing was reasonable and installation completed on time.
 <p>
 Customer support is excellent and available whenever required.
 </p>
+
 <h4>- Rajesh Verma, Secunderabad</h4>
 </div>
 
@@ -1253,7 +1394,25 @@ document.getElementById("result").innerHTML=
 "Recommended Solar System : "+kw+" KW <br> Estimated Monthly Savings : ₹"+saving;
 
 }
+function financeCalc(){
 
+let cost=document.getElementById("solarCost").value;
+
+let emi=(cost/60).toFixed(0);
+
+let saving=(cost/120).toFixed(0);
+
+let roi=(cost/(saving*12)).toFixed(1);
+
+document.getElementById("financeResult").innerHTML=
+
+"Estimated EMI : ₹"+emi+"/month <br><br>" +
+
+"Estimated Monthly Savings : ₹"+saving+" <br><br>" +
+
+"Estimated ROI : "+roi+" Years";
+
+}
 </script>
 
 </body>
